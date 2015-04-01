@@ -1,10 +1,14 @@
 # ext
 
-A Clojure library designed to ... well, that part is up to you.
+Epigrams and witticisms I wish were in core.
 
 ## Usage
 
-FIXME
+In your project.clj:
+
+```clojure
+[ext "0.1.0"]
+```
 
 ## License
 

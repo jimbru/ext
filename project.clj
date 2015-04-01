@@ -1,6 +1,6 @@
-(defproject ext "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+(defproject ext "0.1.0"
+  :description "Clojure core extensions."
+  :url "https://github.com/jimbru/ext"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]])
