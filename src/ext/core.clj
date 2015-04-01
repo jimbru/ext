@@ -1,6 +1,6 @@
 (ns ext.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn second-to-last
+  "Return the second-to-last item in coll."
+  [coll]
+  (nth coll (dec (dec (count coll)))))
