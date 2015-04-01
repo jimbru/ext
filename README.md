@@ -6,9 +6,7 @@ Epigrams and witticisms I wish were in core.
 
 In your project.clj:
 
-```clojure
-[ext "0.1.0"]
-```
+[![Clojars Project](http://clojars.org/ext/latest-version.svg)](http://clojars.org/ext)
 
 ## License
 
