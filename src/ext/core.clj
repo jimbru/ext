@@ -2,16 +2,19 @@
   (:refer-clojure :rename {nth nth-builtin}))
 
 (defn- nth-impl [coll index & {:keys [throw? not-found]}]
-  (let [coll-count (count coll)]
-    (if (or (= coll-count 0)
-            (not (<= (- coll-count) index (dec coll-count))))
-      (if throw?
-        (throw (IndexOutOfBoundsException.))
-        not-found)
-      (let [mod-index (mod index coll-count)]
+  (if (>= index 0)
+    (if throw?
+      (nth-builtin coll index)
+      (nth-builtin coll index not-found))
+    (let [coll-count (count coll)]
+      (if (> (- index) coll-count)
         (if throw?
-          (nth-builtin coll mod-index)
-          (nth-builtin coll mod-index not-found))))))
+          (throw (IndexOutOfBoundsException.))
+          not-found)
+        (let [mod-index (+ coll-count index)]
+          (if throw?
+            (nth-builtin coll mod-index)
+            (nth-builtin coll mod-index not-found)))))))
 
 (defn nth
   "Just like the built-in clojure.core/nth, except this also understands
