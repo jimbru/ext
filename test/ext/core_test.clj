@@ -23,7 +23,11 @@
       (is (= :default (nth v -6 :default)))))
   (testing "empty collection"
     (is (thrown? IndexOutOfBoundsException (nth [] 0)))
-    (is (= :default (nth [] 0 :default)))))
+    (is (= :default (nth [] 0 :default))))
+  (testing "avoid lazy realization for positive indices"
+    ;; nth will never return if it attempts to realize an unbounded range
+    (let [fv (future (nth (range) 10))]
+      (is (= 10 (deref fv 100 :timed-out))))))
 
 (deftest second-to-last-test
   (is (= 4 (second-to-last '(1 2 3 4 5))))
