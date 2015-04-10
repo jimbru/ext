@@ -1,5 +1,7 @@
 # ext
 
+[![Build Status](https://travis-ci.org/jimbru/ext.svg?branch=master)](https://travis-ci.org/jimbru/ext)
+
 Epigrams and witticisms that extend Clojure core.
 
 ## Usage
