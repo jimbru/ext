@@ -1,4 +1,4 @@
-(defproject ext "0.1.1"
+(defproject ext "0.1.2"
   :description "Clojure core extensions."
   :url "https://github.com/jimbru/ext"
   :license {:name "Eclipse Public License"

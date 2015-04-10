@@ -1,6 +1,6 @@
 # ext
 
-Epigrams and witticisms I wish were in core.
+Epigrams and witticisms that extend Clojure core.
 
 ## Usage
 
